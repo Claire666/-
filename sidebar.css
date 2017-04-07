@@ -1,0 +1,28 @@
+ul{
+    list-style:none;
+    padding-left: 0px;
+}
+#sidebar{
+    width:35px;
+    background-color:#eee;
+    padding-top:200px;
+    /*固定位置：使高度均为100%，不必再一个个调，但fixed在ie6上不兼容*/
+    position:fixed;
+    /*设置段落的最小高度*/
+    min-height:100%;
+}
+.item{
+    font-size:12px;
+    font-family: 'Microsoft Yahei';
+    text-align: center;
+    /*设置间距*/
+    margin-top:5px;
+}
+#closebar{
+    position:absolute;
+    bottom:30px;
+    width:35px;
+    text-align: center;
+    /*cursor定义要显示的光标类型：小手形状*/
+    cursor:pointer;
+}
