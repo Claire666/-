@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>下拉菜单</title>
+    <style type="text/css">
+        /*默认的盒子数据设为0*/
+        *{margin:0px;padding:0px;}
+        #nav{background-color:#eee;width:600px;height:40px;margin:0 auto;}
+        /*去除自带的每项前面都有点*/
+        ul{list-style:none;}
+        /*浮动左实现菜单横置；实现宽度自适应：固定的width改为padding设置（后期调整为a标签的宽度）*/
+        ul li{float:left;line-height:40px;text-align:center;position:relative;}
+        /*去掉链接默认样式；设置文字颜色；链接文字底色变为整个块的底色-行间元素设为块级元素；浏览器ie7兼容：高度设置*/
+        a{text-decoration:none;color:#000;display:block;padding:0 10px;height:40px;}
+        /*鼠标经过时改变底色*/
+        a:hover{color:#FFF;background-color:#666;}
+        ul li ul li{float:none;background-color: #eee;margin-top:2px;}
+        /*绝对定位要配合left和top，以浏览器为基准；隐藏二级菜单*/
+        ul li ul{position:absolute;left:0px;top:40px;display:none;}
+        /*浏览器ie7兼容：宽度设置*/
+        ul li ul li a{width:80px;}
+        ul li ul li a:hover{background-color: #06F;}
+        /*经过一级菜单时，显示二级菜单*/
+        ul li:hover ul{display:block;}
+    </style>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">课程选择</a>
+                <ul>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">JQ</a></li>
+                </ul>
+            </li>
+            <li><a href="#">个人中心</a>
+                <ul>
+                    <li><a href="#">信息</a></li>
+                    <li><a href="#">收藏</a></li>
+                </ul>
+            </li>
+            <li><a href="#">案例选择</a>
+                <ul>
+                    <li><a href="#">经典案例</a></li>
+                    <li><a href="#">收藏案例</a></li>
+                </ul>
+            </li>
+            <li><a href="#">关于企业</a>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
